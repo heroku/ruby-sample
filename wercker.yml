@@ -1,0 +1,4 @@
+box: wercker/ruby
+deploy:
+    steps:
+        - heroku-deploy
