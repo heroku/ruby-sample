@@ -6,4 +6,4 @@ build:
   - bundle-install 
 deploy:
   steps:
-    - pjvds/heroku-deploy:
+    - heroku-deploy:
