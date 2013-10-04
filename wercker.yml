@@ -6,4 +6,4 @@ build:
   - bundle-install 
 deploy:
   steps:
-    - heroku-deploy:
+    - heroku-deploy
