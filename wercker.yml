@@ -1,0 +1,9 @@
+box: wercker/ruby
+build:
+  # The steps that will be executed on build
+  steps:
+  # A step that executes `bundle install` command
+  - bundle-install 
+deploy:
+  steps:
+    - heroku-deploy
