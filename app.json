@@ -1,0 +1,7 @@
+{
+  "name": "Ruby Sample",
+  "description": "A barebones Ruby app using Sinatra",
+  "repository": "https://github.com/heroku/ruby-sample",
+  "logo": "https://www.ruby-lang.org/images/header-ruby-logo.png",
+  "keywords": ["ruby", "sinatra"]
+}
