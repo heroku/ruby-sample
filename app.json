@@ -3,5 +3,13 @@
   "description": "A barebones Ruby app using Sinatra",
   "repository": "https://github.com/heroku/ruby-sample",
   "logo": "https://www.ruby-lang.org/images/header-ruby-logo.png",
-  "keywords": ["ruby", "sinatra"]
+  "keywords": ["ruby", "sinatra"],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "export COMMIT_MSG=`git log --format=%B -n 1 HEAD`; echo $COMMIT_MSG",
+        "test": "if [[ $COMMIT_MSG =~ .*skip ci.* ]]; then echo STOP; fi"
+      }
+    }
+  }
 }
