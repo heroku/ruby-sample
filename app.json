@@ -7,7 +7,7 @@
   "environments": {
     "test": {
       "scripts": {
-        "test-setup": "export COMMIT_MSG=`git log --format=%B -n 1 HEAD`; echo $COMMIT_MSG",
+        "test-setup": "env; export COMMIT_MSG=`git log --format=%B -n 1 HEAD`; echo $COMMIT_MSG",
         "test": "if [[ $COMMIT_MSG =~ .*skip.* ]]; then echo STOP; fi"
       }
     }
