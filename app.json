@@ -6,10 +6,9 @@
   "keywords": ["ruby", "sinatra"],
   "environments": {
     "test": {
-      "scripts": {
-        "test-setup": "env; export COMMIT_MSG=`git log --format=%B -n 1 HEAD`; echo $COMMIT_MSG",
-        "test": "if [[ $COMMIT_MSG =~ .*skip.* ]]; then echo STOP; fi"
-      }
+      "addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],
+      "test-setup": "gem install rubocop",
+      "test": "bundle exec rspec"
     }
   }
 }
