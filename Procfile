@@ -1,1 +1,1 @@
-web:  bin/start-pgbouncr bundle exec ruby web.rb -p $PORT
+web:  bin/start-pgbouncer bundle exec ruby web.rb -p $PORT
