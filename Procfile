@@ -1,1 +1,1 @@
-web: java -javaagent:/app/newrelic/newrelic.jar -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/Automation-Anywhere-License-0.0.1-SNAPSHOT.jar
+web: bin/start-pgbouncer bundle exec ruby web.rb -p $PORT
