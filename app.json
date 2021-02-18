@@ -8,11 +8,7 @@
     "test": {
       "addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],
       "test-setup": "psql -c 'CREATE EXTENSION IF NOT EXISTS btree_gist WITH SCHEMA public;';psql -c 'CREATE EXTENSION IF NOT EXISTS hstore WITH SCHEMA public;';psql -c 'CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA public;';psql -c 'CREATE EXTENSION IF NOT EXISTS tablefunc WITH SCHEMA public;'; ",
-      "test": "ECHO",
-      "env": {
-        "LANG": { "description": "A secret key for verifying the integrity of signed cookies."},
-        "RACK_ENV":  { "description": "A secret key for verifying the integrity of signed cookies."}
-      }
+      "test": "ECHO"
     }
   }
 }
