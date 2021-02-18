@@ -8,7 +8,7 @@
     "test": {
       "addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],
       "scripts": {
-      "test-setup": "psql -c 'CREATE EXTENSION IF NOT EXISTS btree_gist WITH SCHEMA public;'; psql -c 'COMMENT ON EXTENSION btree_gist IS \"PL/pgSQL procedural language\";' ",
+      "test-setup": "psql $DATABASE_URL -c 'CREATE EXTENSION IF NOT EXISTS btree_gist WITH SCHEMA public;'; psql $DATABASE_URL -c 'COMMENT ON EXTENSION btree_gist IS \"PL/pgSQL procedural language\";' ",
       "test": "ECHO"
       }
     }
