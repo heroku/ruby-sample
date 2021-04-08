@@ -1,17 +1,26 @@
 {
-  "name": "Ruby Sample",
-  "description": "A barebones Ruby app using Sinatra",
-  "repository": "https://github.com/heroku/ruby-sample",
-  "logo": "https://www.ruby-lang.org/images/header-ruby-logo.png",
-  "keywords": ["ruby", "sinatra"],
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "cloudinary:starter",
+    "algoliasearch:free"
+  ],
   "environments": {
-    "test": {
-      "addons": ["heroku-postgresql:in-dyno", "heroku-redis:in-dyno"],
-      "scripts": {
-      "test-setup": "psql $DATABASE_URL -c 'CREATE EXTENSION IF NOT EXISTS btree_gist WITH SCHEMA public;'; psql $DATABASE_URL -c \"COMMENT ON EXTENSION btree_gist IS 'PL/pgSQL procedural language';\" ",
-      "test": "ECHO"
-      }
+    "review": {
+      "addons": [
+        "heroku-postgresql:hobby-dev",
+        "cloudinary:starter"
+      ]
     }
-  }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-cli"
+    }
+  ]
 }
-
