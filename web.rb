@@ -3,7 +3,7 @@ require 'pg'
 
 get '/' do
   url = ENV['HEROKU_POSTGRESQL_KBARBER_BLUE_URL']
-  conn = PG.connect(url + '?sslmode=verify-full&sslrootcert=/etc/ssl/certs/ca-certificates.pem')
+  conn = PG.connect(url + '?sslmode=verify-full&sslrootcert=/etc/ssl/certs/ca-certificates.crt')
   pid = conn.backend_pid
   "Hello, world, My pid is #{pid}"
 end
