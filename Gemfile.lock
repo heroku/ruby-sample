@@ -3,7 +3,8 @@ GEM
   specs:
     daemons (1.2.2)
     eventmachine (1.0.7)
-    rack (1.6.0)
+    pg (1.2.3)
+    rack (1.6.13)
     rack-protection (1.5.3)
       rack
     sinatra (1.4.6)
@@ -20,5 +21,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pg
   sinatra (~> 1.4.4)
   thin
+
+RUBY VERSION
+   ruby 2.7.3p183
+
+BUNDLED WITH
+   2.2.16
