@@ -4,7 +4,7 @@ GEM
     daemons (1.2.2)
     eventmachine (1.0.7)
     pg (1.2.3)
-    rack (1.6.0)
+    rack (1.6.13)
     rack-protection (1.5.3)
       rack
     sinatra (1.4.6)
